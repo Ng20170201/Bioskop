@@ -25,6 +25,10 @@ namespace Bioskop.WebApp.Controllers
             List<Film> filmovi = unitOfWork.Film.VratiSve();
             return View("Index",filmovi);
         }
+        public ActionResult DetaljiFilma()
+        {
+            return View();
+        }
 
         // eksplicitno naglasavanje da dolazi iz rute.. [FromRoute] 
         public ActionResult Details([FromRoute] int id) {

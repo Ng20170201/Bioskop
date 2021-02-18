@@ -1,36 +1,26 @@
-﻿
-@model List<Film>
-@{ 
+﻿@model List<Film>
+@{
     ViewData["Title"] = "Filmovi";
 }
-<h3>Filmovi</h3>
 
-<table class="table">
-       <thead>
-           <tr>
-               <th>Id</th>
-               <th>Naziv</th>
-               <th>Godina</th>
-               <th>Trajanje</th>
-               <th>Reziser</th>
-               <th>Zanr</th>
-               <th>Detalji</th>
-           </tr>
-       </thead>
-    <tbody>
-        @foreach (Film f in Model) { 
-        <tr>
-            <th>@f.FilmId</th>
-            <th>@f.Naziv</th>
-            <th>@f.Godina</th>
-            <th>@f.Trajanje</th>
-            <th>@f.Zanr</th>
-            <th>@f.Reziser</th>
-            <th>@Html.ActionLink("Detalji","Details","Film",
-                  new { id = f.FilmId})</th>
-        </tr>
-        }
-    </tbody>
+<h1 id="heading">Cinaplexx</h1>
 
-</table>
+<div class="slide hi-slide">
+    <div class="hi-prev"></div>
+    <div class="hi-next"></div>
+    <ul>
+        <li> <img src="~/img/ji.jpg" alt=""></li>
+        <li> <img src="~/img/vikend.jpg" alt=""></li>
+        <li> <img src="~/img/dnk.jpg" alt=""></li>
+        <li> <img src="~/img/kg.jpg" alt=""></li>
+        <li> <img src="~/img/ww.jpg" alt=""></li>
+        <li> <img src="~/img/tr.jpg" alt=""></li>
+        <li> <img src="~/img/joker.jpg" alt=""></li>
+    </ul>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="js/jquery.hislide.js"></script>-
+<script>
+    $('.slide').hiSlide();
+</script>
